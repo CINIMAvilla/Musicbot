@@ -1,7 +1,7 @@
 ffmpeg==1.4
 ffmpeg-python==0.2.0
 ffprobe==0.5
-pyrogram==1.0.14
+Pyrogram==1.2.9
 py-tgcalls
 aiohttp[speedups]
 cryptg
