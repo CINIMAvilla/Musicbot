@@ -24,14 +24,14 @@ async def fetch_audio(client, message):
         await message.reply("`Format Not Supported`")
         return
     if warner_stark.video:
-        lel = await message.reply("`Video Detected, Converting To Audio !`")
+        six = await message.reply("`Video Detected, Converting To Audio !`")
         warner_bros = await message.reply_to_message.download()
         stark_cmd = f"ffmpeg -i {warner_bros} -map 0:a riya.mp3"
         await runcmd(stark_cmd)
         final_warner = "riya.mp3"
     elif warner_stark.audio:
         final_warner = await message.reply_to_message.download()
-    await lel.delete()
+    await six.delete()
     return final_warner
 
 async def edit_or_reply(message, text, parse_mode="md"):
