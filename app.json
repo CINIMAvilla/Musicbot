@@ -14,14 +14,12 @@
         "API_ID": {
             "description": "Your api_id get it from https",
             "required": "True",
-            "value": "//my.telegram.org",
-            "generator": "secret"
+            "value": ""
         },
         "API_HASH": {
             "description": "Your api_hash get it from https",
             "required": "True",
-            "value": "//my.telegram.org",
-            "generator": "secret"
+            "value": ""
         },
         "BOT_TOKEN": {
             "description": "Get it from @Botfather",
