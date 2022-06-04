@@ -62,7 +62,7 @@ def song(client, message):
             dur += int(dur_arr[i]) * secmul
             secmul *= 60
         message.reply_text(
-            text="Sending for you.."
+            text="Sending for you..")
         message.reply_audio(
             audio_file,
             thumb=thumb_name,
