@@ -21,19 +21,19 @@ async def start(bot, message):
   current_time = datetime.utcnow()
   uptime_sec = (current_time - START_TIME).total_seconds()
   uptime = _human_time_duration(int(uptime_sec))
-  m=await message.reply_text("▰▱▱▱")
-  n=await m.edit("▰▰▱▱")
-  o=await n.edit("▰▰▰▱")
-  p=await o.edit("▰▰▰▰")
-  await p.edit(text=Config.START_MSG.format(message.from_user.mention),
-    disable_web_page_preview=True,
-    reply_markup=InlineKeyboardMarkup(
-      [[
+    m=await message.reply_text("▰▱▱▱")
+    n=await m.edit("▰▰▱▱")
+    s=await n.edit("▰▰▰▱")
+    o=await s.edit("▰▰▰▰")
+    await o.edit(text=Config.START_MSG.format(message.from_user.mention),
+         disable_web_page_preview=True,
+         reply_markup = InlineKeyboardMarkup(
+           [[
              InlineKeyboardButton("🎧 ᴍᴜsɪᴄ.ᴘᴀɴᴅᴀ", url="telegram.dog/musicspanda")
            ],[
              InlineKeyboardButton("ᴏᴡɴᴇʀ", url="https://t.me/Gxneo"),
              InlineKeyboardButton("ᴄʟᴏsᴇ", callback_data="close")
-       ]]))
+           ]]))
   
 @Client.on_callback_query(filters.regex("close"))
 async def close(bot, query):
