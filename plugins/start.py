@@ -15,12 +15,8 @@ TIME_DURATION_UNITS = (
     ('sec', 1)
 )
 
-@Client.on_message(filters.command(
-"start") & filters.private)
-async def start(bot, message):
-  current_time = datetime.utcnow()
-  uptime_sec = (current_time - START_TIME).total_seconds()
-  uptime = _human_time_duration(int(uptime_sec))
+@Client.on_message(filters.command('start') & filters.private)
+async def start(client, message):
     m=await message.reply_text("▰▱▱▱")
     n=await m.edit("▰▰▱▱")
     s=await n.edit("▰▰▰▱")
