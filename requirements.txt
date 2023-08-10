@@ -16,6 +16,8 @@ asyncio
 Pillow>=4.2.0
 aiofiles
 yt_dlp
-
+Flask==2.2.2
+gunicorn==20.1.0
+aiohttp==3.8.1
 
 
