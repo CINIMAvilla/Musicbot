@@ -1,7 +1,7 @@
 import os
 from os import getenv
 
-GROUP_ID = int(getenv("GROUP_ID", None))
+GROUP_ID = int(getenv("GROUP_ID", "0"))
 ADMINS = [id for id in getenv("ADMINS").split(" ")]
 SESSION_NAME = getenv("RiyaMusicBot", "session")
 API_ID = int(getenv("API_ID"))
